@@ -87,16 +87,18 @@ public class generateOneNumber1 {
         }
 
 
+
         for (int i = 0; i < arrayToSort.length; i++)            //for anidado necesitamos dos contadores i y j
         {
-            for (int j = i + 1; j < arrayToSort.length; j++)    //es importante setear j a i+1 xq empieza a chequear en el segundo
+            for (int j = i + 1; j < arrayToSort.length; j++)    //!! setear j a i+1 xq empieza a chequear en el segundo índice del array
             {
-                int tmp = 0;
-                if (arrayToSort[i] > arrayToSort[j])
+                int temp = 0;                                    //el temp da lo mismo el nro al q se inicialice...
+
+                if (arrayToSort[i] > arrayToSort[j])            //chequeamos si el nro de la izq es mayor q el de la derecha
                 {
-                    tmp = arrayToSort[i];
-                    arrayToSort[i] = arrayToSort[j];
-                    arrayToSort[j] = tmp;
+                    temp = arrayToSort[i];                      //se guarda el de la izq (mayor) en temp
+                    arrayToSort[i] = arrayToSort[j];            //el de la derecha (menor) se pone en la izquierda
+                    arrayToSort[j] = temp;                      //se rellena el de la derecha con el temp (ex izq, mayor)
                 }
             }
         }
