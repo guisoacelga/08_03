@@ -6,6 +6,7 @@ public class ArithmeticTower {
         System.out.println("ARITHMETIC TOWER : " + dateValue);
 
         for (int i = 2; i <= 9 ; i++) {
+        //en este FOR printeamos y luego multiplicamos por el nro sgte y acumulamos
 
             System.out.println( dateValue + " * " + i + " = " + dateValue * i);
 

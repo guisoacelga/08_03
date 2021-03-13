@@ -90,7 +90,7 @@ public class generateOneNumber1 {
 
         for (int i = 0; i < arrayToSort.length; i++)            //for anidado necesitamos dos contadores i y j
         {
-            for (int j = i + 1; j < arrayToSort.length; j++)    //!! setear j a i+1 xq empieza a chequear en el segundo índice del array
+            for (int j = i + 1; j < arrayToSort.length; j++)    //!!setear j a i+1 xq empieza a chequear en el segundo índice del array
             {
                 int temp = 0;                                    //el temp da lo mismo el nro al q se inicialice...
 
