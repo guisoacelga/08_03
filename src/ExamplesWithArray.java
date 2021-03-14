@@ -87,9 +87,9 @@
             for (int j = 1; j < array.length; j++) {
                 suma = suma + array[j];
             }
-
             return suma;
         }
+
         // Write a method, calculating and returning the average over all numbers
         public static float avrgOfAllNrs(int[] array){
             int suma = sumOfAllNrs(array);
@@ -99,8 +99,11 @@
         }
 
 
-        // TODO 5 (complicated): Write a method, which returns an array with duplicated numbers (81, 51)
+        // Write a method, which returns an array with duplicated numbers (81, 51)
+        public static int[] findDuplicates(int[] array){
 
+            return duplicados;
+        }
 
 
     }
