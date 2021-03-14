@@ -13,7 +13,7 @@ public class ExamplesWithArray {
                     51, 52, 148, 59, 54, 47, 111, 42, 38, 51, 37, 29, 24, 81,
                     12, 29, 2, 17, 8, 1 };
 
-            int[] arr2 = { 5, 0, 5, 27, 156, 0, 1, 118, 234, 7, 2, 12 };
+            int[] arr2 = { 5, 0, 5, 27, 156, 0, 1, 118, 234, 7, 2, 12, 5 };
 
             System.out.println("\n----------- ********* ----------- ");
             System.out.println("Aquí con arr *-* el q nos dio el profe");
