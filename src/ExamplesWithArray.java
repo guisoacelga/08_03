@@ -13,7 +13,7 @@ public class ExamplesWithArray {
                     51, 52, 148, 59, 54, 47, 111, 42, 38, 51, 37, 29, 24, 81,
                     12, 29, 2, 17, 8, 1 };
 
-            int[] arr2 = { 5, 0, 5, 27, 156, 0, 1, 118, 234, 7, 2, 12, 5 };
+            int[] arr2 = { 5, 0, 5, 27,27, 156, 0, 1, 118, 234, 7, 2, 12, 5 };
 
             System.out.println("\n----------- ********* ----------- ");
             System.out.println("Aquí con arr *-* el q nos dio el profe");
@@ -106,47 +106,51 @@ public class ExamplesWithArray {
 
 
         // Write a method, which returns an array with duplicated numbers (81, 51)
-        public static int[] findDuplicates(int arr[], int n)
-        {
-            if (n==0 || n==1){
+        public static int[] findDuplicates(int arr[], int n) {
+            if (n == 0 || n == 1) {
                 //TODO: ver qué hacer en este caso
             }
-
             // crear un array temp (para guardar los duplicados)
-            // este array debe tener el largo del array original
-            // llenar el array temporal de -1
-            int[] temp = new int[n];
-            for (int i = 0; i < temp.length; i++) {
-                temp[i]= -1;
+            int[] temp = new int[n];                        // este array debe tener el largo del array original
+
+            for (int i = 0; i < temp.length; i++) {         // llenar el array temporal de -1 ** esto es innecesario :D
+                temp[i] = -1;
             }
 
-            //crear un contador para contar el nro de veces que encuentra un repetido
+            int contadorRepetidos = 0;                      //crear un contador de repetidos
             //este contador será luego el largo del array final
-            int j=0;
+
             //necesitamos un for anidado para recorrer el arreglo buscando repetidos
-            //debe buscar hasta el largo del array original -1 xq el de adentro buscará en ese +1
-            for (int a=0; a<n-1; a++)
-            {
-                //en el for interno debemos partir en uno más q el contador de afuera
-                //así evitamos q busque en el mismo nro
-                for (int d=a+1; d<n-1; d++)
-                {
-                    if (arr[d] == arr[a]) {
-                        temp[j] = arr[a];
-                        j++;
+            for (int a = 0; a < arr.length - 1; a++) {      //debe buscar hasta el largo del array original -1 xq el de adentro buscará en ese +1
+
+                for (int d = a + 1; d < arr.length; d++) {  //para evitar q busque en el mismo nro el for interno debe partir en +1 q el contador de afuera
+
+                    if (arr[a] == arr[d]) {                //si encuentra una coincidencia--> un REPETIDO!!
+                        int contadorEncontrado = 0;         //necesitamos un contadorEncontrados para chequear si ya lo guardamos
+
+                        for (int g = 0; g < temp.length; g++) {
+                            if (temp[g] == arr[a]){
+                                contadorEncontrado = 1;
+                            }
+                        }
+
+                        if (contadorEncontrado == 0) {
+                            temp[contadorRepetidos] = arr[a];
+                            contadorRepetidos++;
+                        }
                     }
                 }
             }
 
-            //Crear un array de largo j
-            //llenar el array con los elementos del temp hasta temp[j-1]
-            int[] duplicados = new int[j];
-            for (int i = 0; i < j; i++) {
-                duplicados[i]= temp[i];
+            int[] duplicadosArr = new int[contadorRepetidos];  //Crear un array de largo contadorRepetidos
+
+            for (int i = 0; i < contadorRepetidos; i++) {   //llenar el array con los elementos del temp hasta temp[contadorRepetidos-1]
+                duplicadosArr[i] = temp[i];
             }
 
-            //TODO: qué hacer si un nro se repite más de dos veces?
-            return duplicados;
+            return duplicadosArr;
+
+
         }
     }
 
