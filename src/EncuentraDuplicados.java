@@ -5,7 +5,6 @@ public class EncuentraDuplicados {
         int arr[] = {10, 2, 3, 4, 5, 6, 7, 8, 9,50 };
         int largo = arr.length;                           //guardar el largo en una variable --> luego pasarlo como parámetro
 
-
         System.out.println("El array original es: ");
         System.out.println(Arrays.toString(arr));
 
@@ -57,7 +56,5 @@ public class EncuentraDuplicados {
         }
 
         return duplicadosArr;
-
-
     }
 }

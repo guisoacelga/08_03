@@ -24,6 +24,8 @@ public class ExamplesWithArray {
             System.out.println("Y si sumamos todos los nros de este array nos da (arr): " + sumOfAllNrs(arr));
             System.out.println("Y el promedio es (arr): " + avrgOfAllNrs(arr));
             System.out.println("Y ahora los duplicados del array (arr): " + Arrays.toString(findDuplicates(arr, arr.length))); ;
+            System.out.println("Y reemplazaremos 51 con 15 (arr): " + Arrays.toString(replace(arr, 51, 15)));
+            System.out.println("Y ahora agregamos un nro (arr): " + Arrays.toString(extend(arr, 51)));
 
             System.out.println("\n----------- ********* ----------- ");
             System.out.println("Aquí con arr1 *-* le agregué algunos nros al q nos dio el profe");
@@ -152,5 +154,29 @@ public class ExamplesWithArray {
 
 
         }
+
+        //Write a method that replaces one number by a new number
+        public static int[] replace(int[] arr, int searchNumber, int newNumber){
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == searchNumber){
+                    arr[i] = newNumber;
+                }
+            }
+            return arr;
+        }
+
+        //Write a method that extends an array by one number
+        public static int[] extend(int[] arr, int addedNumber){
+            int[] newArr = new int[arr.length+1];
+
+            for (int i = 0; i < arr.length; i++) {
+                newArr[i] = arr[i];
+            }
+
+            newArr[arr.length] = addedNumber;
+
+            return newArr;
+        }
+
     }
 
