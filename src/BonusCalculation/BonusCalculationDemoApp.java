@@ -12,8 +12,8 @@ public class BonusCalculationDemoApp {
                 employee1.salary = 28000;
                 employee1.age = 34;
 
-                System.out.println("mitarbeiter1.monatsAbrechnung() = " + employee1.monthlySalary());
-                System.out.println("mitarbeiter1.jahresAbrechnung() = " + employee1.yearlySalary());
+                System.out.println("employee1.monthlySalary() = " + employee1.monthlySalary());
+                System.out.println("employee1.yearlySalary() = " + employee1.yearlySalary());
 
 
 

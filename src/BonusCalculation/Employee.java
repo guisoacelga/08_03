@@ -8,32 +8,33 @@ public class Employee {
     int age;
 
     public double monthlySalary(){
-        salary *= 0.8;
-        if (salary < 10000){
-            salary *= 0.9;
-        } else if (salary < 20000){
-            salary -= 10000;
-            salary *= 0.8;
-            salary += 9000;
-        } else if (salary < 30000){
-            salary -= 20000;
-            salary *= 0.68;
-            salary += 17000;
-        } else if (salary <= 50000){
-            salary -= 30000;
-            salary *= 0.55;
-            salary += 23800;
-        } else if (salary > 50001) {
-            salary -= 50000;
-            salary *= 0.40;
-            salary += 34800;
+       double salaryd =salary * 0.8;
+        if (salaryd < 10000){
+            salaryd *= 0.9;
+        } else if (salaryd < 20000){
+            salaryd -= 10000;
+            salaryd *= 0.8;
+            salaryd += 9000;
+        } else if (salaryd < 30000){
+            salaryd -= 20000;
+            salaryd *= 0.68;
+            salaryd += 17000;
+        } else if (salaryd <= 50000){
+            salaryd -= 30000;
+            salaryd *= 0.55;
+            salaryd += 23800;
+        } else if (salaryd > 50001) {
+            salaryd -= 50000;
+            salaryd *= 0.40;
+            salaryd += 34800;
         }
-
-        return salary;
+        double monthlySalary = salaryd/12D;
+        return monthlySalary;
     }
     public double yearlySalary(){
         double yearSalary = monthlySalary();
         yearSalary *= 12;
+
         return yearSalary;
     }
 
