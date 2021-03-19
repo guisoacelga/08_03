@@ -7,7 +7,7 @@ public class ToUpperCase {
 
     public static String toUpperCase(String str){
         char c = ' ';
-        boolean isSpace = false;
+
         String newStr = "";
 
         for (int i = 0; i < str.length(); i++) {
